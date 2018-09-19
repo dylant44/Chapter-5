@@ -8,7 +8,7 @@ public class AgeGame
 	public static void main(String[] args) 
 	{
 		int usersAge;
-		String result;
+		String result = null;
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Please enter your age");
