@@ -40,11 +40,11 @@ public class Pay {
 		{
 			rate = 17;
 		}
-		if(skill == 2)
+		else if(skill == 2)
 		{
 			rate = 20;
 		}
-		if(skill == 3)
+		else if(skill == 3)
 		{
 			rate = 22;
 		}
@@ -53,7 +53,7 @@ public class Pay {
 		regPay = hours * rate;
 		overtimePay = 0;
 		}
-		if(hours >= 40)
+		else if(hours >= 40)
 		{
 		regPay = 40 * rate;
 		overtimePay = (hours - 40) * (rate * 1.5);
@@ -75,7 +75,7 @@ public class Pay {
 			{
 				insurMoney = 32.5;
 			}
-			else if(insurOption != 1)
+			else if(insurOption == 2)
 			{
 				insurMoney = 20;
 			}
@@ -88,7 +88,7 @@ public class Pay {
 		finalPay = netPay - insurMoney;
 		if(finalPay <= 0)
 		{
-			System.out.print("Error, deductions exceed gross pay");
+			System.out.print("Error: deductions exceed gross pay");
 		}
 		else
 		{
